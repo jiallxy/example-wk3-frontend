@@ -1,0 +1,36 @@
+/*
+  CSS is used to style the HTML elements.
+  We are using a "selector" (e.g., body, h1, #greeting)
+  to target an element and apply "declarations" (e.g., color: blue;).
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Light gray background */
+    color: #333; /* Dark text */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    padding: 10px 0;
+    background-color: #007bff; /* Blue header */
+    color: white;
+    margin-bottom: 20px;
+}
+
+#greeting {
+    font-size: 1.2em;
+    color: green; /* Target the specific 'greeting' ID */
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Changes the mouse cursor to a pointer */
+}
