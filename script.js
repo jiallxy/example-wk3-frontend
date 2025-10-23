@@ -21,10 +21,17 @@ async function handleClick() {
     const backendUrl = "https://example-wk3-backend-umber.vercel.app";  // IMPORTANT: no slash at the end
 
     // fetch the data by calling 'backendUrl/route' (note the slash before the route)
-    let resp = await fetch(`${backendUrl}/example`);           
+    let resp = await fetch(`${backendUrl}/list`);           
     let data = await resp.json();
 
     // do something with the data    
-    greetingText.textContent = data.message;    
+    greetingText.textContent = data.message;  
+
+// loop through all the records we got back from the back-end  
+    for( rec of data ) {
+        let listItem = document.createElement('li');  // create the LI html element
+        listItem.textContent = rec.name;              // insert the name from the record as the text 
+        myList.appendChild(listItem);
+    }
     
 }
